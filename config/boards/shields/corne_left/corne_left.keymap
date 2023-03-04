@@ -6,19 +6,11 @@
     keymap {
         default_layer {
             bindings = <
-               &mo 1    &kp Q   &kp W    &kp E    &kp R   &kp T    
+               &kp ESC    &kp Q   &kp W    &kp E    &kp R   &kp T    
                &kp TAB    &kp A   &kp S    &kp D    &kp F   &kp G  
                &kp LCTRL    &kp Z   &kp X    &kp C    &kp V   &kp B
                &kp KP_N1    &kp KP_N2   &kp KP_N3  
             >;   
-        };
-
-        bt_layer {
-            bindings = <
-                &none   &none   &bootloader
-                &none   &none   &bt BT_CLR
-                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2
-            >;
         };
     };
 };
