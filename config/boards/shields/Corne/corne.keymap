@@ -8,7 +8,7 @@
 / {
 
     behaviors {
-        
+
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
@@ -30,7 +30,7 @@
         // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
         //                                         | RETURN  |  LOWER  | BACKSPACE  |                      |  RETURN |  RAISE  |   TAB   |
             bindings = <
-    &kp ESC    AS(Q)  AS(W)    AS(E)     AS(R)     AS(T)                                                AS(Y)     AS(U)     AS(I)    AS(O)    AS(P)    &kp RET
+    &kp ESC    AS(T)  AS(R)    AS(E)     AS(W)     AS(Q)                                                AS(Y)     AS(U)     AS(I)    AS(O)    AS(P)    &kp RET
     &kp TAB    AS(A)    AS(S)    AS(D)     AS(D)     AS(F)                                                AS(H)    AS(J)     AS(K)     AS(L)     AS(SEMI) AS(SQT)
     &kp LSHIFT AS(Z)    AS(X)    AS(C)     AS(V)     AS(B)                                                 AS(N)     AS(M)     AS(COMMA) AS(DOT)   AS(FSLH) AS(BSLH)
                                            &kp RET    &kp SPACE &kp BSPC                          &kp SPACE   &kp SPACE &kp TAB
