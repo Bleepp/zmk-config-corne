@@ -8,6 +8,7 @@
 / {
 
     behaviors {
+        
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
