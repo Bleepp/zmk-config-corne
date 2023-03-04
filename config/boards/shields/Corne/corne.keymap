@@ -1,21 +1,38 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define AS(keycode) &as LS(keycode) keycode
+
+
+
 / {
+
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
+// |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    RETURN    |
 // |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
 // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
-//                                         | RETURN  |  SPACE  | ESCAPE  |                      |  RETURN |  SPACE  |   TAB   |
+//                                         | RETURN  |  LOWER  | BACKSPACE  |                      |  RETURN |  RAISE  |   TAB   |
             bindings = <
-    &kp ESC    &kp Q    &kp W    &kp E     &kp R     &kp T                                                 &kp Y     &kp U     &kp I     &kp O     &kp P    &kp BSLH
-    &kp TAB    &kp A    &kp S    &kp D     &kp F     &kp G                                                 &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
-    &kp LSHIFT &kp Z    &kp X    &kp C     &kp V     &kp B                                                 &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
-                                           &kp RET    &kp SPACE &kp ESC                          &kp RET   &kp SPACE &kp TAB
+    &kp ESC    AS(Q)  AS(W)    AS(E)     AS(R)     AS(T)                                                AS(Y)     AS(U)     AS(I)    AS(O)    AS(P)    &kp RET
+    &kp TAB    AS(A)    AS(S)    AS(D)     AS(D)     AS(F)                                                AS(H)    AS(J)     AS(K)     AS(L)     AS(SEMI) AS(SQT)
+    &kp LSHIFT AS(Z)    AS(X)    AS(C)     AS(V)     AS(B)                                                 AS(N)     AS(M)     AS(COMMA) AS(DOT)   AS(FSLH) AS(BSLH)
+                                           &kp RET    &kp SPACE &kp BSPC                          &kp SPACE   &kp SPACE &kp TAB
             >;  
         };
     };
