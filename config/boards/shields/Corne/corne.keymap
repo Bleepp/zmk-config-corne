@@ -23,11 +23,11 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    RETURN    |
-// |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
-// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
-//                                         | RETURN  |  LOWER  | BACKSPACE  |                      |  RETURN |  RAISE  |   TAB   |
+        // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    RETURN    |
+        // |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
+        // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
+        //                                         | RETURN  |  LOWER  | BACKSPACE  |                      |  RETURN |  RAISE  |   TAB   |
             bindings = <
     &kp ESC    AS(Q)  AS(W)    AS(E)     AS(R)     AS(T)                                                AS(Y)     AS(U)     AS(I)    AS(O)    AS(P)    &kp RET
     &kp TAB    AS(A)    AS(S)    AS(D)     AS(D)     AS(F)                                                AS(H)    AS(J)     AS(K)     AS(L)     AS(SEMI) AS(SQT)
