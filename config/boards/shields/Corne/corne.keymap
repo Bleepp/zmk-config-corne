@@ -6,7 +6,6 @@
 
 
 / {
-
     behaviors {
 
         as: auto_shift {
@@ -37,4 +36,4 @@
             >;  
         };
     };
-};
+};                  
